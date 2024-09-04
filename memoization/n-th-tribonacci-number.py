@@ -1,9 +1,6 @@
 class Solution:
     def tribonacci(self, n: int) -> int:
-        T = [0] * (n+1)
-
-        if n <= 2:
-            return T[n]
+        T = [0] * 38
 
         T[0] = 0
         T[1] = 1
