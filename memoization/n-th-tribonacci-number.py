@@ -4,7 +4,7 @@ class Solution:
 
         if n <= 2:
             return T[n]
-            
+
         T[0] = 0
         T[1] = 1
         T[2] = 1
