@@ -3,9 +3,11 @@ class Solution:
         max_avg = 0
         p = k-1
 
+        if len(nums) == k:
+            return sum(nums) / k
+
         while p <= len(nums) - 1:
             curr_avg = sum(nums[p+1-k:p+1]) / k
-            print(curr_avg, p)
             if curr_avg > max_avg:
                 max_avg = curr_avg
             p += 1
