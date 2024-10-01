@@ -7,7 +7,9 @@ class Solution:
             if num in diff:
                 if diff[num] % 2 == 1:
                     res += 1
-            rem = k - num
-            diff[rem] = diff.get(rem, 0) + 1
+                    diff[num] -= 1
+            else:
+                rem = k - num
+                diff[rem] = diff.get(rem, 0) + 1
 
         return res
