@@ -22,6 +22,12 @@ class Solution:
         '''
 
         # sort ascending to do binary, get nums length, get temp sum variable and empty result list 
+        '''
+        [[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,0,1]]
+        '''
+
+
+
         nums.sort() 
         n = len(nums)
         total = 0
@@ -40,7 +46,7 @@ class Solution:
                 else:
                     result.append([nums[i], nums[j], nums[k]]) # if equal, add triplet to result and move mid
                     j += 1
-                while j < k and nums[j] == nums[j-1]: # Duplicates inside the binary search
-                    j += 1
+                    while j < k and nums[j] == nums[j-1]: # Duplicates inside the binary search
+                        j += 1
         
         return result
