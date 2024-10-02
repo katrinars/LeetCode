@@ -46,7 +46,7 @@ class Solution:
                 else:
                     result.append([nums[i], nums[j], nums[k]]) # if equal, add triplet to result and move mid
                     j += 1
-                    while j < k and nums[j] == nums[j-1]: # Duplicates inside the binary search
+                    if j < k and nums[j] == nums[j-1]: # Duplicates inside the binary search
                         j += 1
         
         return result
