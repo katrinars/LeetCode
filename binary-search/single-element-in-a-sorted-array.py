@@ -3,22 +3,19 @@ class Solution:
         if len(nums) == 1:
             return nums[0]
 
-        left = 0
-        right = len(nums) - 1
+        lp = 0
+        rp = 1
 
-        while left <= right:
-            mid = (left + right) // 2
-            if left == right or (nums[mid] != nums[mid-1] and nums[mid] != nums[mid+1]):
-                return nums[mid]
-            if nums[mid] == nums[mid-1]: # mid = mid-left
-                if (mid - left - 1) % 2 == 0: # left-1 is even, search right
-                    left = mid + 1
-                else: 
-                    right = mid - 1
-            elif nums[mid] == nums[mid+1]: # mid = mid-right
-                if (right - mid - 1) % 2 == 0: # right-1 is even, search left
-                    right = mid - 1
-                else: 
-                    left = mid + 1
-            # else:
-            #     return nums[mid]
+        while rp < len(nums):
+            if nums[lp] == nums[rp]:
+                lp += 2
+                rp += 2
+            else:
+                return nums[lp]
+        if rp > len(nums) - 1:
+            return nums[lp]
+
+        return nums[rp]
+        
+
+
