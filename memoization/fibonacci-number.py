@@ -1,5 +1,10 @@
 class Solution:
     def fib(self, n: int) -> int:
+        if n == 0:
+            return 0
+        if n == 1:
+            return 1
+            
         F = [0]* (n + 1)
         F[1] = 1
 
