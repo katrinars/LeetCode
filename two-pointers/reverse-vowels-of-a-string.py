@@ -6,9 +6,9 @@ class Solution:
         s2 = list(s)
 
         while l < r:
-            if s2[l] not in vowels:
+            if s[l] not in vowels:
                 l += 1
-            if s2[r] not in vowels:
+            elif s[r] not in vowels:
                 r -= 1
             else:
                 s2[l], s2[r] = s2[r], s2[l]
