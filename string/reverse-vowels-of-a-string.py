@@ -2,7 +2,7 @@ class Solution:
     def reverseVowels(self, s: str) -> str:
         l = 0
         r = len(s) - 1
-        vowels = ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
+        vowels = 'aeiouAEIOU'
         s2 = list(s)
 
         while l < r:
