@@ -8,9 +8,14 @@ class Solution:
         if not list1: return list2
         if not list2: return list1
     
-        merge = list1
-        a = list1.next
-        b = list2
+        if list1.val < list2.val:
+            merge = list1
+            a = list1.next
+            b = list2
+        else:
+            merge = list2
+            a = list2.next
+            b = list1
         m = merge
 
         while a and b:
