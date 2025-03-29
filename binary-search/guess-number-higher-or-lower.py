@@ -7,13 +7,9 @@
 
 class Solution:
     def guessNumber(self, n: int) -> int:
-        if n ==1: return n
-        
         i = 1
-        while i < n:
-            g = i + n % 2
-            print(i, g, n)
-            print(guess(g))
+        while i <= n:
+            g = (i + n) // 2
             if guess(g) == -1:
                 n = g - 1
             elif guess(g) == 1:
