@@ -4,6 +4,9 @@ class Solution:
         i = 0
         s = s.split()
 
+        if len(pattern) != len(s):
+            return False
+
         while i < len(pattern):
             if pattern[i] in match:
                 if match[pattern[i]] != s[i]:
@@ -14,4 +17,5 @@ class Solution:
                 else:
                     return False
             i += 1
+        
         return True
