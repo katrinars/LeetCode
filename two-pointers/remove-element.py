@@ -3,7 +3,7 @@ class Solution:
         l = 0
         r = len(nums)-1
 
-        while l < r:
+        while l <= r:
             if nums[r] == val:
                 r -= 1
             elif nums[l] == val:
@@ -12,5 +12,5 @@ class Solution:
                 r -= 1
             else: 
                 l += 1
-        return l+1
+        return l
             
