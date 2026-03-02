@@ -7,10 +7,9 @@ class Solution:
         if len(nums) == k:
             return sum(nums) / k 
 
-        while e < len(nums): # e = 3 --- len(nums) = 6
+        while e < len(nums) + 1: # e = 3 --- len(nums) = 6
             average = sum(nums[s:e]) / k 
             max_avg = max(max_avg, average) 
-            print(average, max_avg)
 
             s += 1
             e += 1
