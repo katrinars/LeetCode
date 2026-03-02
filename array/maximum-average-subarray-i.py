@@ -10,7 +10,7 @@ class Solution:
 
         while e < len(nums) + 1: 
             new_sum = sum(nums[s:e])
-            highest_sum = max(max_avg, average) 
+            highest_sum = max(highest_sum, new_sum) 
 
             s += 1
             e += 1
